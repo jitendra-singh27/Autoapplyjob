@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "ApplyPilot — Reviewed Autofill",
+  "version": "1.0.0",
+  "description": "Fill common job application fields from your ApplyPilot profile after reviewing each field. Never submits a form.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://localhost:4000/*", "http://127.0.0.1:4000/*"],
+  "action": {
+    "default_title": "ApplyPilot Autofill",
+    "default_popup": "popup.html"
+  }
+}

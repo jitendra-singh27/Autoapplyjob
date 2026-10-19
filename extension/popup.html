@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ApplyPilot Autofill</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header><div class="mark">A</div><div><h1>ApplyPilot</h1><p>Reviewed form autofill</p></div></header>
+    <label for="apiBase">API base URL</label>
+    <input id="apiBase" value="http://localhost:4000/api" spellcheck="false">
+    <label for="token">Session token</label>
+    <textarea id="token" rows="3" placeholder="Paste your ApplyPilot access token"></textarea>
+    <button id="save" class="secondary">Save connection</button>
+    <div id="status" role="status"></div>
+    <div class="divider"></div>
+    <button id="sync" class="secondary">Sync profile from ApplyPilot</button>
+    <div id="profileStatus" class="muted">Profile not synced yet.</div>
+    <button id="scan" class="primary">Scan current page & review</button>
+    <p class="notice">You choose which fields to fill. This extension never clicks Apply, Submit, or sends a form.</p>
+    <footer>Profile data is stored locally in this browser extension. Remove it with “Clear local data”.</footer>
+    <button id="clear" class="link">Clear local data</button>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
