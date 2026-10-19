@@ -8,7 +8,7 @@
 </head>
 <body>
   <main>
-    <header><div class="mark">A</div><div><h1>ApplyPilot</h1><p>Reviewed form autofill</p></div></header>
+    <header><div class="mark">A</div><div><h1>ApplyPilot</h1><p>Reviewed application assistant</p></div></header>
     <label for="apiBase">API base URL</label>
     <input id="apiBase" value="http://localhost:4000/api" spellcheck="false">
     <label for="token">Session token</label>
@@ -18,9 +18,18 @@
     <div class="divider"></div>
     <button id="sync" class="secondary">Sync profile from ApplyPilot</button>
     <div id="profileStatus" class="muted">Profile not synced yet.</div>
-    <button id="scan" class="primary">Scan current page & review</button>
-    <p class="notice">You choose which fields to fill. This extension never clicks Apply, Submit, or sends a form.</p>
-    <footer>Profile data is stored locally in this browser extension. Remove it with “Clear local data”.</footer>
+    <details class="extra-profile"><summary>Extra application answers (optional)</summary>
+      <label for="currentCompany">Current company</label><input id="currentCompany" placeholder="Leave blank if not applicable">
+      <label for="education">Education / degree</label><input id="education" placeholder="e.g. BCA, 2022">
+      <label for="salaryExpectation">Expected salary</label><input id="salaryExpectation" placeholder="Your confirmed range">
+      <label for="noticePeriod">Notice period</label><input id="noticePeriod" placeholder="e.g. Immediate / 30 days">
+      <label for="workAuthorization">Work authorization</label><input id="workAuthorization" placeholder="Only enter a confirmed answer">
+      <button id="saveExtra" class="secondary">Save extra answers</button>
+    </details>
+    <button id="scan" class="primary">Scan supported form & review</button>
+    <button id="manual" class="secondary">Open manual copy assistant</button>
+    <p class="notice">On LinkedIn and Indeed, page scanning/autofill is disabled. Use manual copy/paste there. On other supported forms, review suggested values before filling. No application is submitted automatically.</p>
+    <footer>Profile values are stored locally in this extension. Clear them when using a shared computer.</footer>
     <button id="clear" class="link">Clear local data</button>
   </main>
   <script src="popup.js"></script>
